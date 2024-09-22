@@ -3,6 +3,9 @@ package com.example.login2
 import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -36,6 +39,7 @@ class MainActivity : AppCompatActivity() {
         if (navHostFragment != null){
             navController = navHostFragment.navController
             setupActionBarWithNavController(navController)
+            setupDestinationChangedListener()
         } else {
             throw RuntimeException("NavHostFragment not found with ID R.id_nav_host_fragment")
         }
@@ -46,16 +50,54 @@ class MainActivity : AppCompatActivity() {
             Log.d(  "MainActivity", "Navigated to ${destination.label}")
             when (destination.id){
                 R.id.registerFragment -> {
-                    supportActionBar?.title = "registro"
+                    supportActionBar?.title = "Registro"
                     supportActionBar?.setDisplayShowHomeEnabled(true)
                 }
-                R.id.registerFragment -> {
-                    supportActionBar?.title = "HomeApp"
-                }
+//                R.id.registerFragment -> {
+//                    supportActionBar?.title = "HomeApp"
+//                }
+               else -> {
+                   supportActionBar?.title = "Login"
+                   supportActionBar?.setDisplayHomeAsUpEnabled(false)
+
+               }
             }
 
         }
     }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.toolbar, menu)
+        return true
+    }
+
+    override fun onPrepareOptionsMenu(menu: Menu?): Boolean {
+         return super.onPrepareOptionsMenu(menu)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+        when(item.itemId) {
+            R.id.action_logout ->{
+                return true
+
+            }
+            R.id.action_settings ->{
+                Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show()
+                return true
+            }
+
+        }
+        return super.onOptionsItemSelected(item)
+
+
+    }
+
 
 }
 
