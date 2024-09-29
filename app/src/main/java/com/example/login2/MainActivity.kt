@@ -1,27 +1,16 @@
 package com.example.login2
 
-import android.nfc.Tag
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.activity.ComponentActivity
-import androidx.activity.compose.setContent
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.login2.databinding.MainActivityBinding
-import com.example.login2.ui.theme.Login2Theme
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -31,7 +20,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         //Configuracion de la toolbar
         setSupportActionBar(binding.toolbar)
         //Configuracion del NavController principal
@@ -84,6 +72,7 @@ class MainActivity : AppCompatActivity() {
 
         when(item.itemId) {
             R.id.action_logout ->{
+                navController.navigate(R.id.action_homeFragment_to_loginFragment)
                 return true
 
             }
