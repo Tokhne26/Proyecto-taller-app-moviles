@@ -3,21 +3,42 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_home"
-    app:startDestination="@id/welcomeFragment2">
+    app:startDestination="@id/welcomeFragment">
 
     <fragment
-        android:id="@+id/graphFragment2"
+        android:id="@+id/graphFragment"
         android:name="com.example.login2.view.home.graph.GraphFragment"
         android:label="fragment_graph"
-        tools:layout="@layout/fragment_graph" />
+        tools:layout="@layout/fragment_graph" >
+        <action
+            android:id="@+id/action_graphFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_graphFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/productFragment"
         android:name="com.example.login2.view.home.product.ProductFragment"
         android:label="fragment_product"
-        tools:layout="@layout/fragment_product" />
+        tools:layout="@layout/fragment_product" >
+        <action
+            android:id="@+id/action_productFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment" />
+        <action
+            android:id="@+id/action_productFragment_to_graphFragment"
+            app:destination="@id/graphFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/welcomeFragment2"
+        android:id="@+id/welcomeFragment"
         android:name="com.example.login2.view.home.welcome.WelcomeFragment"
         android:label="fragment_welcome"
-        tools:layout="@layout/fragment_welcome" />
+        tools:layout="@layout/fragment_welcome" >
+        <action
+            android:id="@+id/action_welcomeFragment_to_productFragment"
+            app:destination="@id/productFragment" />
+        <action
+            android:id="@+id/action_welcomeFragment_to_graphFragment"
+            app:destination="@id/graphFragment" />
+    </fragment>
 </navigation>

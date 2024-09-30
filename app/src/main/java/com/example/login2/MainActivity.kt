@@ -6,10 +6,13 @@ import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.login2.databinding.MainActivityBinding
+import com.example.login2.view.data.FeriadosFactory
+import kotlinx.coroutines.launch
 
 
 class MainActivity : AppCompatActivity() {
@@ -18,6 +21,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
         //Configuracion de la toolbar
@@ -35,20 +39,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun setupDestinationChangedListener(){
         navController.addOnDestinationChangedListener { _, destination, _->
-            Log.d(  "MainActivity", "Navigated to ${destination.label}")
-            when (destination.id){
-                R.id.registerFragment -> {
-                    supportActionBar?.title = "Registro"
-                    supportActionBar?.setDisplayShowHomeEnabled(true)
-                }
-//                R.id.registerFragment -> {
-//                    supportActionBar?.title = "HomeApp"
-//                }
-               else -> {
-                   supportActionBar?.title = "Login"
-                   supportActionBar?.setDisplayHomeAsUpEnabled(false)
-
-               }
+            supportActionBar?.title=when(destination.id){
+                R.id.welcomeFragment->"Home"
+                R.id.productFragment->"Lista"
+                R.id.graphFragment->"Boletin"
+                else->"Default"
             }
 
         }
@@ -71,11 +66,11 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId) {
-            R.id.action_logout ->{
-                navController.navigate(R.id.action_homeFragment_to_loginFragment)
-                return true
-
-            }
+//            R.id.action_logout ->{
+//                navController.navigate(R.id.action_homeFragment_to_loginFragment)
+//                return true
+//
+//            }
             R.id.action_settings ->{
                 Toast.makeText(this, "settings", Toast.LENGTH_SHORT).show()
                 return true

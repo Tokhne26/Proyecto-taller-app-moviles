@@ -3,18 +3,18 @@
 
     <item
         android:id="@+id/productFragment"
-        android:icon="@drawable/baseline_precision_manufacturing_24"
-        android:title="@string/product"
+        android:icon="@drawable/baseline_add_24"
+        android:title="Lista"
         />
     <item
         android:id="@+id/welcomeFragment"
         android:icon="@drawable/baseline_home_24"
-        android:title="@string/home"
+        android:title="Home"
         />
     <item
         android:id="@+id/graphFragment"
-        android:icon="@drawable/baseline_auto_graph_24"
-        android:title="@string/graph"
+        android:icon="@drawable/baseline_outgoing_mail_24"
+        android:title="Boletin"
         />
 
 </menu>
