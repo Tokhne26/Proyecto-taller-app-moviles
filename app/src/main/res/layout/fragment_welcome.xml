@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre: "
-            android:textSize="16sp"/>
+            android:textSize="20sp"/>
 
         <!-- Fecha -->
         <TextView
@@ -27,7 +27,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fecha: "
-            android:textSize="16sp"/>
+            android:textSize="20sp"/>
 
         <!-- Irrenunciable -->
         <TextView
@@ -35,7 +35,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Irrenunciable: "
-            android:textSize="16sp"/>
+            android:textSize="20sp"/>
 
 
         <!-- Tipo -->
@@ -44,7 +44,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tipo: "
-            android:textSize="16sp"/>
+            android:textSize="20sp"/>
 
 
     </LinearLayout>

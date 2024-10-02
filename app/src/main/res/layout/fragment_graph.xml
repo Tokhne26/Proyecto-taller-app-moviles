@@ -115,11 +115,11 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/register" />
+                app:layout_constraintTop_toBottomOf="@+id/register" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/EmailTextInputLayout"
-                app:layout_constraintTop_toBottomOf="@id/tvInformacionAnticipada"
+                app:layout_constraintTop_toBottomOf="@+id/InstruccionCorreo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:startIconDrawable="@drawable/baseline_email_24"
@@ -127,6 +127,7 @@
                 android:text="email"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content">
+
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/EmailEditText"
@@ -144,16 +145,26 @@
                 android:id="@+id/register"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Register"
-                app:layout_constraintTop_toBottomOf="@id/EmailEditText"
+                android:text="Registrate Aqui"
+                app:layout_constraintTop_toBottomOf="@+id/EmailTextInputLayout"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="15dp"
                 android:textSize="16dp"
                 android:clickable="true"
-                app:backgroundTint="@color/teal_700"
+                app:backgroundTint="#FF5722"
                 app:icon="@drawable/baseline_person_add_24"
                 />
+            <TextView
+                android:id="@+id/InstruccionCorreo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Ingresa tu correo y presiona el boton"
+                android:textSize="16sp"
+                android:textColor="#FF5722"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInformacionAnticipada"/>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
