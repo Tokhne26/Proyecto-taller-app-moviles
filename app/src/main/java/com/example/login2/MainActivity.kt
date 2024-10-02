@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 R.id.welcomeFragment->"Home"
                 R.id.productFragment->"Lista"
                 R.id.graphFragment->"Boletin"
-                else->"Default"
+                else->"Calendapp"
             }
 
         }

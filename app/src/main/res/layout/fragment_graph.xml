@@ -13,7 +13,8 @@
         >
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:background="#DEDEF4">
             <TextView
                 android:id="@+id/tvTitulo"
                 android:layout_width="match_parent"

@@ -6,12 +6,11 @@
     tools:context=".view.home.welcome.WelcomeFragment">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_marginTop="40dp"
-        android:padding="16dp">
+        android:padding="50dp"
+        android:background="#DEDEF4">
 
         <!-- Comentarios -->
         <TextView
@@ -19,7 +18,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Nombre: "
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
 
         <!-- Fecha -->
         <TextView
@@ -27,7 +32,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fecha: "
-            android:textSize="20sp"/>
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
 
         <!-- Irrenunciable -->
         <TextView
@@ -35,8 +46,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Irrenunciable: "
-            android:textSize="20sp"/>
-
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            android:background="#E0E0E0"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
 
         <!-- Tipo -->
         <TextView
@@ -44,8 +60,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tipo: "
-            android:textSize="20sp"/>
-
+            android:textSize="20sp"
+            android:textColor="#333333"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="start"
+            android:background="#FFFFFF"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"/>
 
     </LinearLayout>
 
