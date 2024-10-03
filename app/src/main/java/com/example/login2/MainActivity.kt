@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         binding = MainActivityBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         //Configuracion de la toolbar
         setSupportActionBar(binding.toolbar)
         //Configuracion del NavController principal
@@ -81,6 +82,8 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
+
 
 
 }

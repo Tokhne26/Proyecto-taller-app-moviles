@@ -9,24 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="50dp"
+        android:padding="40dp"
         android:background="#DEDEF4">
 
         <!-- Comentarios -->
+
+        <!-- Fecha -->
         <TextView
             android:id="@+id/textViewNombre"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Nombre: "
-            android:textSize="20sp"
-            android:textColor="#333333"
+            android:layout_marginBottom="8dp"
+            android:background="#E0E0E0"
             android:fontFamily="sans-serif-medium"
             android:gravity="start"
-            android:background="#E0E0E0"
             android:padding="8dp"
-            android:layout_marginBottom="8dp"/>
+            android:text="Nombre: "
+            android:textColor="#333333"
+            android:textSize="20sp" />
 
-        <!-- Fecha -->
         <TextView
             android:id="@+id/textViewFecha"
             android:layout_width="match_parent"
@@ -67,6 +68,22 @@
             android:background="#FFFFFF"
             android:padding="8dp"
             android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"/>
+
+        <ImageView
+            android:id="@+id/imageView"
+
+            android:scaleType="centerCrop"
+            android:src="@drawable/raza"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="0dp"
+            />
 
     </LinearLayout>
 

@@ -22,6 +22,7 @@
                 android:text="¡No te pierdas ninguna oferta!"
                 android:textSize="20sp"
                 android:textStyle="bold"
+                android:gravity="center"
                 android:textColor="@android:color/black"
                 android:paddingBottom="20dp"
                 android:paddingTop="100dp"
@@ -38,6 +39,7 @@
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
                 android:paddingBottom="16dp"
+                android:layout_margin="10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvTitulo"/>
@@ -49,6 +51,7 @@
                 android:layout_height="wrap_content"
                 android:text="¿Por qué suscribirte?"
                 android:textSize="18sp"
+                android:gravity="center"
                 android:textStyle="bold"
                 android:textColor="@android:color/black"
                 android:paddingBottom="8dp"
@@ -66,6 +69,7 @@
                 android:textColor="@android:color/black"
                 android:paddingBottom="4dp"
                 app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvSubtitulo"/>
 
@@ -79,6 +83,7 @@
                 android:textColor="@android:color/black"
                 android:paddingBottom="4dp"
                 app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginHorizontal="20dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tvOfertasExclusivas"/>
 
@@ -90,6 +95,7 @@
                 android:text="• Recordatorios personalizados: No olvides ningún feriado importante ni nuestras ofertas relacionadas."
                 android:textSize="16sp"
                 android:textColor="@android:color/black"
+                android:layout_marginHorizontal="20dp"
                 android:paddingBottom="4dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -102,6 +108,7 @@
                 android:layout_height="wrap_content"
                 android:text="• Información anticipada: Sé el primero en enterarte de nuestras ofertas especiales y eventos únicos."
                 android:textSize="16sp"
+                android:layout_marginHorizontal="20dp"
                 android:textColor="@android:color/black"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -123,18 +130,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/InstruccionCorreo"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginHorizontal="10dp"
                 app:startIconDrawable="@drawable/baseline_email_24"
                 android:hint="email"
                 android:text="email"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:errorEnabled="true">
 
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/EmailEditText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:inputType="text"
+                    android:layout_height="match_parent"
+                    android:inputType="textEmailAddress"
+                    android:lines="1"
+                    android:layout_marginHorizontal="10dp"
+                    app:helperText="@string/required"
+                    app:helperTextTextColor="@android:color/holo_red_dark"
                     android:layout_marginTop="16dp"
                     android:layout_marginBottom="16dp"
                     app:layout_constraintTop_toBottomOf="@+id/EmailTextInputLayout"
@@ -147,6 +160,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:text="Registrate Aqui"
+                android:layout_marginHorizontal="10dp"
                 app:layout_constraintTop_toBottomOf="@+id/EmailTextInputLayout"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -154,7 +168,7 @@
                 android:textSize="16dp"
                 android:clickable="true"
                 app:backgroundTint="#FF5722"
-                app:icon="@drawable/baseline_person_add_24"
+                app:icon="@drawable/baseline_notifications_24"
                 />
             <TextView
                 android:id="@+id/InstruccionCorreo"
@@ -163,6 +177,7 @@
                 android:text="Ingresa tu correo y presiona el boton"
                 android:textSize="16sp"
                 android:textColor="#FF5722"
+                android:gravity="center"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tvInformacionAnticipada"/>

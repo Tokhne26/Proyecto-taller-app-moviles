@@ -5,4 +5,5 @@
     <string name="product">Product</string>
     <string name="home">Home</string>
     <string name="graph">Graph</string>
+    <string name="required">Ingrese correo</string>
 </resources>

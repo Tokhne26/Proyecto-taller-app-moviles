@@ -7,13 +7,14 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 interface Feriados  {
-
+//interfaz que recupera los datos  de la API y los parametros que requerimos
     @GET("feriados/{type}")
     suspend fun  listaFeriados(
         @Path("type") type: String
     )   :Response
 }
 
+//implementacion del api y la conversion de gson
 object FeriadosFactory{
     fun makeFeriados():Feriados{
         return Retrofit.Builder()

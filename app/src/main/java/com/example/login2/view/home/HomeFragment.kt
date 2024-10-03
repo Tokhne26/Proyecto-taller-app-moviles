@@ -5,11 +5,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.DataBindingUtil.setContentView
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
+import androidx.recyclerview.widget.RecyclerView
 import com.example.login2.R
 import com.example.login2.databinding.FragmentHomeBinding
 import com.example.login2.view.data.FeriadosFactory
@@ -56,6 +58,7 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 
 
 
